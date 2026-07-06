@@ -1,17 +1,18 @@
 body{
-font-family:Arial,sans-serif;
-background:#fff4f7;
 margin:0;
 padding:20px;
+font-family:Arial,sans-serif;
+background:linear-gradient(180deg,#ffe6f0,#fff);
 color:#333;
 }
 
 header{
-background:linear-gradient(135deg,#ff7eb3,#ffb6c1);
+background:#ff5fa2;
 color:white;
-padding:20px;
+padding:25px;
 border-radius:20px;
 text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
 }
 
 .card{
@@ -19,28 +20,33 @@ background:white;
 padding:20px;
 margin-top:20px;
 border-radius:20px;
-box-shadow:0 4px 10px rgba(0,0,0,.1);
+box-shadow:0 4px 12px rgba(0,0,0,.12);
 }
 
-label{
-display:block;
-margin:12px 0;
-font-size:18px;
-}
-
-input[type="checkbox"]{
-transform:scale(1.4);
-margin-right:10px;
-}
-
-progress{
+button{
 width:100%;
-height:25px;
+padding:15px;
+border:none;
+border-radius:15px;
+background:#ff5fa2;
+color:white;
+font-size:18px;
+margin-top:15px;
+cursor:pointer;
 }
 
-#porcentaje{
+button:hover{
+background:#ff2f87;
+}
+
+input{
+width:100%;
+padding:12px;
+border-radius:10px;
+border:1px solid #ddd;
+font-size:16px;
+}
+
+h1,h2,p{
 text-align:center;
-font-weight:bold;
-font-size:20px;
-color:#ff4f8b;
 }
