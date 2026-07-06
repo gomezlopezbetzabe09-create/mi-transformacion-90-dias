@@ -1,71 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mi Transformación 90 Días</title>
-
-<link rel="manifest" href="manifest.json">
-<link rel="stylesheet" href="style.css">
-
-<meta name="theme-color" content="#ff7eb3">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Transformación - 90 Días</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
-
-<h1>🍑 Mi Transformación 90 Días</h1>
-
-<p>Tu objetivo:</p>
-
-<ul>
-
-<li>✔ Bajar grasa</li>
-
-<li>✔ Glúteos grandes</li>
-
-<li>✔ Cintura marcada</li>
-
-<li>✔ Espalda estilizada</li>
-
-<li>✔ Brazos delgados</li>
-
-</ul>
-
+  <h1>💪 Mi Transformación de 90 Días</h1>
+  <p>Disciplina • Constancia • Resultados</p>
 </header>
 
+<main>
+
 <section class="card">
-
-<h2>Progreso</h2>
-
-<progress id="progress" value="0" max="100"></progress>
-
-<p id="porcentaje">0%</p>
-
+<h2>📅 Día actual</h2>
+<h1 id="dia">1</h1>
+<button onclick="sumarDia()">Siguiente día</button>
 </section>
 
 <section class="card">
-
-<h2>Rutina de Hoy</h2>
-
-<label><input type="checkbox"> Hip Thrust 4x15</label>
-
-<label><input type="checkbox"> Puente de Glúteos 3x20</label>
-
-<label><input type="checkbox"> Sentadilla Sumo 4x15</label>
-
-<label><input type="checkbox"> Zancadas 3x12</label>
-
-<label><input type="checkbox"> Patadas 3x20</label>
-
-<label><input type="checkbox"> Abducciones 3x20</label>
-
+<h2>⚖️ Peso</h2>
+<input type="number" id="peso" placeholder="Ingresa tu peso">
+<button onclick="guardarPeso()">Guardar</button>
+<p id="pesoGuardado"></p>
 </section>
+
+<section class="card">
+<h2>💧 Agua</h2>
+<p id="agua">0 / 8 vasos</p>
+<button onclick="tomarAgua()">+1 vaso</button>
+</section>
+
+<section class="card">
+<h2>🏋️ Rutina de hoy</h2>
+<ul>
+<li>Calentamiento 10 min</li>
+<li>Sentadillas</li>
+<li>Peso muerto</li>
+<li>Press de banca</li>
+<li>Cardio 20 min</li>
+</ul>
+</section>
+
+</main>
 
 <script src="app.js"></script>
 
 </body>
-
-  </html>
+</html>
