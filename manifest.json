@@ -1,0 +1,10 @@
+{
+  "name": "Mi Transformación 90 Días",
+  "short_name": "90 Días",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#fff4f7",
+  "theme_color": "#ff7eb3",
+  "orientation": "portrait",
+  "icons": []
+}
