@@ -1,34 +1,38 @@
-const checks = document.querySelectorAll("input[type='checkbox']");
-const progress = document.getElementById("progress");
-const porcentaje = document.getElementById("porcentaje");
+let dia = Number(localStorage.getItem("dia")) || 1;
+let agua = Number(localStorage.getItem("agua")) || 0;
 
-function actualizar() {
-  let marcados = 0;
+document.getElementById("dia").textContent = dia;
+document.getElementById("agua").textContent = agua + " / 8 vasos";
 
-  checks.forEach(c => {
-    if (c.checked) marcados++;
-  });
-
-  const p = Math.round((marcados / checks.length) * 100);
-
-  progress.value = p;
-  porcentaje.textContent = p + "%";
-
-  localStorage.setItem("progreso", JSON.stringify(
-    [...checks].map(c => c.checked)
-  ));
+const pesoGuardado = localStorage.getItem("peso");
+if (pesoGuardado) {
+  document.getElementById("pesoGuardado").textContent =
+    "Peso actual: " + pesoGuardado + " kg";
 }
 
-const guardado = JSON.parse(localStorage.getItem("progreso"));
-
-if (guardado) {
-  checks.forEach((c, i) => {
-    c.checked = guardado[i];
-  });
+function sumarDia() {
+  if (dia < 90) {
+    dia++;
+    localStorage.setItem("dia", dia);
+    document.getElementById("dia").textContent = dia;
+  } else {
+    alert("🎉 ¡Felicidades! Completaste los 90 días.");
+  }
 }
 
-checks.forEach(c => {
-  c.addEventListener("change", actualizar);
-});
+function tomarAgua() {
+  if (agua < 8) {
+    agua++;
+    localStorage.setItem("agua", agua);
+    document.getElementById("agua").textContent = agua + " / 8 vasos";
+  }
+}
 
-actualizar();
+function guardarPeso() {
+  const peso = document.getElementById("peso").value;
+  if (peso) {
+    localStorage.setItem("peso", peso);
+    document.getElementById("pesoGuardado").textContent =
+      "Peso actual: " + peso + " kg";
+  }
+      }
